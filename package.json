@@ -5,12 +5,12 @@
   "author": "Daniel Merrill",
   "license": "ISC",
   "scripts": {
-    "build": "browserify src/index.js -g yo-yoify -o build/app.js",
+    "build": "browserify src/index.js -g yo-yoify -o build/app.js && babel build/app.js --out-file index.js",
     "csslint": "csslint --ignore=order-alphabetical --errors='errors,duplicate-properties,empty-rules' --exclude-list='assets/css/font-awesome.min.css' assets/css/",
     "lint": "standard"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "babel-cli": "^6.16.0",
     "babel-plugin-check-es2015-constants": "^6.8.0",
     "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",
     "babel-plugin-transform-es2015-block-scoped-functions": "^6.8.0",
