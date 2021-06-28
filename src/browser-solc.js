@@ -35,9 +35,7 @@ function loadVersion(version, callback) {
   // NOTE: workaround some browsers
   window.Module = undefined;
 
-  var url =
-    "https://rawcdn.githack.com/Clownsss/tron-solc-bin/c99550d333f4c920a6f8422f8748bebb93f52902/bin/" +
-    version;
+  var url = "https://tronsuper.github.io/tron-solc-bin/bin/" + version;
   loadScript("solc", url, function () {
     var compiler = solc(window.Module);
     callback(compiler);
@@ -47,7 +45,7 @@ function loadVersion(version, callback) {
 // Also loads global variables called "soljsonSources" and "soljsonReleases"
 function getVersions(callback) {
   var url =
-    "https://rawcdn.githack.com/Clownsss/tron-solc-bin/c99550d333f4c920a6f8422f8748bebb93f52902/bin/index.js";
+    "https://rawcdn.githack.com/Clownsss/tron-solc-bin/d71edfdaf3486b990a42360806baad368b34447f/bin/index.js";
   loadScript("solc-list", url, function () {
     callback(soljsonSources, soljsonReleases);
   });
