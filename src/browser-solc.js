@@ -45,7 +45,7 @@ function loadVersion(version, callback) {
 // Also loads global variables called "soljsonSources" and "soljsonReleases"
 function getVersions(callback) {
   var url =
-    "https://rawcdn.githack.com/Clownsss/tron-solc-bin/d71edfdaf3486b990a42360806baad368b34447f/bin/index.js";
+    "https://rawcdn.githack.com/Clownsss/tron-solc-bin/0675107ba213b414f410b432baf8386dcc811f68/bin/index.js";
   loadScript("solc-list", url, function () {
     callback(soljsonSources, soljsonReleases);
   });
